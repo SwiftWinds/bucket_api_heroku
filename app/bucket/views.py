@@ -1,12 +1,23 @@
-from flask import Blueprint, request, abort
+from flask import Blueprint, request, abort, jsonify
 from app.auth.helper import token_required
 from app.bucket.helper import response, response_for_created_bucket, response_for_user_bucket, response_with_pagination, \
     get_user_bucket_json_list, paginate_buckets
 from app.models import User, Bucket
+from factlister import eventLister
 
 # Initialize blueprint
 bucket = Blueprint('bucket', __name__)
 
+
+@bucket.route('/get-dates', methods=['POST'])
+def get_dates():
+    req_data = request.get_data()['text']
+    return jsonify({
+        'summary': eventLister(req_data)
+    })
+        
+     
+    
 
 @bucket.route('/bucketlists/', methods=['GET'])
 @token_required
