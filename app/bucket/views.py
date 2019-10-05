@@ -11,9 +11,12 @@ bucket = Blueprint('bucket', __name__)
 
 @bucket.route('/get-dates', methods=['POST'])
 def get_dates():
-    req_data = request.get_data()['text']
+    req_data = request.get_data()
+    text = req_data['text']
+    subject = req_data['subject']
+
     return jsonify({
-        'summary': eventLister(req_data)
+        'summary': eventLister(text, subject)
     })
         
      
