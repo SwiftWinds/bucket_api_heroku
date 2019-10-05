@@ -8,7 +8,6 @@ certifi==2019.9.11
 cffi==1.10.0
 chardet==3.0.4
 click==6.7
-cmake==3.14.4
 coverage==4.4.1
 cycler==0.10.0
 cymem==2.0.2
