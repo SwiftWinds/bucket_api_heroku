@@ -1,9 +1,10 @@
 import spacy
+import en_core_web_lg
 import textacy.extract
 
 def eventLister(text, subject):
     # Load the large English NLP model
-    nlp = spacy.load('en_core_web_lg')
+    nlp = en_core_web_lg.load()
 
     # Parse the document with spaCy
     doc = nlp(text)
@@ -17,7 +18,7 @@ def eventLister(text, subject):
     for statement in statements:
         subject, verb, fact = statement
         str +=f" - {fact}"
-        
+
     return str
 
 eventLister("""London is the capital and most populous city of England and  the United Kingdom.
