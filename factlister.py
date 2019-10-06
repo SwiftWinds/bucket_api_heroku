@@ -12,11 +12,13 @@ def eventLister(text, subject):
     statements = textacy.extract.semistructured_statements(doc, subject)
 
     # Return the results
-    print("Here are the things I know about " + subject + ":")
+    str = "Here are the things I know about " + subject + ":"
 
     for statement in statements:
         subject, verb, fact = statement
-        print(f" - {fact}")
+        str +=f" - {fact}"
+        
+    return str
 
 eventLister("""London is the capital and most populous city of England and  the United Kingdom.
     Standing on the River Thames in the south east of the island of Great Britain,
