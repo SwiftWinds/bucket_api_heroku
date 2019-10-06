@@ -1,10 +1,10 @@
 import spacy
-import en_core_web_lg
+import en_core_web_md
 import textacy.extract
 
 def eventLister(text, subject):
     # Load the large English NLP model
-    nlp = en_core_web_lg.load()
+    nlp = en_core_web_md.load()
 
     # Parse the document with spaCy
     doc = nlp(text)
