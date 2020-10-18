@@ -11,7 +11,7 @@ coverage==4.4.1
 cymem==2.0.2
 cytoolz==0.10.0
 decorator==4.4.0
-Flask==0.12.2
+Flask==1.0
 Flask-Bcrypt==0.7.1
 Flask-Migrate==2.1.0
 Flask-Script==2.0.5
