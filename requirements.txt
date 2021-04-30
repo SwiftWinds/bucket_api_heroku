@@ -55,7 +55,7 @@ thinc==7.1.1
 toolz==0.10.0
 tqdm==4.36.1
 typed-ast==1.4.0
-urllib3==1.25.6
+urllib3==1.25.8
 wasabi==0.2.2
 Werkzeug==0.12.2
 wrapt==1.11.2
